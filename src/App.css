@@ -1,2 +1,9 @@
-.App {
+:root {
+  --main-header-height: 100px;
+  --container-max-width: 1000px;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
 }

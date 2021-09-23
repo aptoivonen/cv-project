@@ -1,0 +1,15 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--main-header-height);
+  color: #fff;
+  font-size: 2rem;
+  background: #333333;
+}
+
+.main-heading {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
