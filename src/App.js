@@ -11,11 +11,17 @@ function App() {
     email: "",
     phoneNumber: "",
   });
-  const [education, setEducation] = useState([]);
+  // const [education, setEducation] = useState([]);
+  const [isSubmitted, setSubmitted] = useState(false);
 
   const handlePersonalInfoChange = (data) => {
     console.log("handlePersonalInfoChange:", data);
     setPersonalInfo(data);
+  };
+
+  const handleSubmit = () => {
+    console.log("handleSubmit");
+    setSubmitted(true);
   };
 
   return (
@@ -23,7 +29,9 @@ function App() {
       <Header />
       <Main
         personalInfo={personalInfo}
+        isSubmitted={isSubmitted}
         onPersonalInfoChange={handlePersonalInfoChange}
+        onSubmit={handleSubmit}
       />
     </div>
   );

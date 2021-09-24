@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 
-function PersonalInfoFormSection({ personalInfo, onPersonalInfoChange }) {
+export default function PersonalInfoFormSection({
+  personalInfo,
+  onPersonalInfoChange,
+}) {
   const handleChange = (e) => {
     const newPersonalInfo = {
       ...personalInfo,
@@ -76,5 +79,3 @@ PersonalInfoFormSection.propTypes = {
     phoneNumber: PropTypes.string,
   }).isRequired,
 };
-
-export default PersonalInfoFormSection;
