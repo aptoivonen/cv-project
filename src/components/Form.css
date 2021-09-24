@@ -9,20 +9,16 @@
 }
 
 .form-control {
-  display: flex;
-}
-
-.form-control {
   margin-top: 1rem;
 }
 
 .form-label {
-  display: inline-block;
-  min-width: 15ch;
+  display: block;
 }
 
 .form-input {
-  flex: 1 0 0;
+  display: block;
+  width: 100%;
   padding: 0.3rem;
   font-size: 1rem;
   border-radius: 0.2rem;
