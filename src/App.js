@@ -11,7 +11,7 @@ function App() {
     email: "",
     phoneNumber: "",
   });
-  // const [education, setEducation] = useState([]);
+  const [education, setEducation] = useState([]);
   const [isSubmitted, setSubmitted] = useState(false);
 
   const handlePersonalInfoChange = (data) => {
@@ -19,8 +19,11 @@ function App() {
     setPersonalInfo(data);
   };
 
+  const handleEducationChange = (data) => {
+    setEducation(data);
+  };
+
   const handleSubmit = () => {
-    console.log("handleSubmit");
     setSubmitted(true);
   };
 
@@ -29,8 +32,10 @@ function App() {
       <Header />
       <Main
         personalInfo={personalInfo}
-        isSubmitted={isSubmitted}
         onPersonalInfoChange={handlePersonalInfoChange}
+        education={education}
+        onEducationChange={handleEducationChange}
+        isSubmitted={isSubmitted}
         onSubmit={handleSubmit}
       />
     </div>

@@ -1,9 +1,12 @@
 import Form from "./Form";
+import Result from "./Result";
 import "./Main.css";
 
 export default function Main({
   personalInfo,
   onPersonalInfoChange,
+  education,
+  onEducationChange,
   isSubmitted,
   onSubmit,
 }) {
@@ -11,14 +14,13 @@ export default function Main({
     <main className="main">
       <div className="container">
         {isSubmitted ? (
-          <div>
-            <h2>Submitted</h2>
-            <p>{personalInfo.firstName}</p>
-          </div>
+          <Result personalInfo={personalInfo} education={education} />
         ) : (
           <Form
             personalInfo={personalInfo}
             onPersonalInfoChange={onPersonalInfoChange}
+            education={education}
+            onEducationChange={onEducationChange}
             onSubmit={onSubmit}
           />
         )}

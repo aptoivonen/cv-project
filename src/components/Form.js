@@ -3,7 +3,13 @@ import PersonalInfoFormSection from "./PersonalInfoFormSection";
 import EducationFormSection from "./EducationFormSection";
 import WorkExperienceFormSection from "./WorkExperienceFormSection";
 
-export default function Form({ personalInfo, onPersonalInfoChange, onSubmit }) {
+export default function Form({
+  personalInfo,
+  onPersonalInfoChange,
+  education,
+  onEducationChange,
+  onSubmit,
+}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit();
@@ -15,7 +21,10 @@ export default function Form({ personalInfo, onPersonalInfoChange, onSubmit }) {
         personalInfo={personalInfo}
         onPersonalInfoChange={onPersonalInfoChange}
       />
-      <EducationFormSection />
+      <EducationFormSection
+        education={education}
+        onEducationChange={onEducationChange}
+      />
       <WorkExperienceFormSection />
       <button type="submit">Done</button>
     </form>
