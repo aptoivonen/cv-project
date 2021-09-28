@@ -3,8 +3,7 @@ import EducationFormPartial from "./EducationFormPartial";
 
 export default function EducationFormSection({ education, onEducationChange }) {
   const handleChange = (e, id) => {
-    const indexOfSeparator = e.target.name.indexOf("-");
-    const name = e.target.name.slice(0, indexOfSeparator);
+    const [name] = e.target.name.split("-");
     const value = e.target.value;
     const newEducation = education.map((edu) =>
       edu.id === id
