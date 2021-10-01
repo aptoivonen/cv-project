@@ -4,6 +4,7 @@ export default function EducationFormSection({
   education,
   onEducationChange,
   onEducationAdd,
+  onEducationDelete,
 }) {
   const handleChange = (id, name, value) => {
     const newEducation = education.map((edu) =>
@@ -17,10 +18,10 @@ export default function EducationFormSection({
     onEducationChange(newEducation);
   };
 
-  const handleDelete = (id) => {
-    const newEducation = education.filter((edu) => edu.id !== id);
-    onEducationChange(newEducation);
-  };
+  // const handleDelete = (id) => {
+  //   const newEducation = education.filter((edu) => edu.id !== id);
+  //   onEducationChange(newEducation);
+  // };
 
   return (
     <div>
@@ -31,7 +32,7 @@ export default function EducationFormSection({
             key={edu.id}
             education={edu}
             onChange={handleChange}
-            onDelete={handleDelete}
+            onEducationDelete={onEducationDelete}
           />
         ))}
       </div>

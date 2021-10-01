@@ -32,6 +32,11 @@ function App() {
     setEducation(newEducation);
   };
 
+  const handleEducationDelete = (id) => {
+    const newEducation = education.filter((edu) => edu.id !== id);
+    setEducation(newEducation);
+  };
+
   const handleSubmit = () => {
     setSubmitted(true);
   };
@@ -45,6 +50,7 @@ function App() {
         education={education}
         onEducationChange={handleEducationChange}
         onEducationAdd={handleEducationAdd}
+        onEducationDelete={handleEducationDelete}
         isSubmitted={isSubmitted}
         onSubmit={handleSubmit}
       />

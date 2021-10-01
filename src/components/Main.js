@@ -8,6 +8,7 @@ export default function Main({
   education,
   onEducationChange,
   onEducationAdd,
+  onEducationDelete,
   isSubmitted,
   onSubmit,
 }) {
@@ -23,6 +24,7 @@ export default function Main({
             education={education}
             onEducationChange={onEducationChange}
             onEducationAdd={onEducationAdd}
+            onEducationDelete={onEducationDelete}
             onSubmit={onSubmit}
           />
         )}

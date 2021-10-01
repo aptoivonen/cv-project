@@ -1,7 +1,7 @@
 export default function EducationFormPartial({
   education,
   onChange,
-  onDelete,
+  onEducationDelete,
 }) {
   const handleChange = (e, id) => {
     const [name] = e.target.name.split("-");
@@ -10,7 +10,7 @@ export default function EducationFormPartial({
   };
   return (
     <div>
-      <button onClick={() => onDelete(education.id)}>Delete</button>
+      <button onClick={() => onEducationDelete(education.id)}>Delete</button>
       <div className="form-control">
         <label className="form-label" htmlFor={`schoolName-${education.id}`}>
           School Name:
