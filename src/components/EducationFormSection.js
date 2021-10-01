@@ -18,11 +18,6 @@ export default function EducationFormSection({
     onEducationChange(newEducation);
   };
 
-  // const handleDelete = (id) => {
-  //   const newEducation = education.filter((edu) => edu.id !== id);
-  //   onEducationChange(newEducation);
-  // };
-
   return (
     <div>
       <h2 className="form-heading">Education</h2>
