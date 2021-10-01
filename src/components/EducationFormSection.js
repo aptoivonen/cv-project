@@ -2,9 +2,7 @@ import uniqid from "uniqid";
 import EducationFormPartial from "./EducationFormPartial";
 
 export default function EducationFormSection({ education, onEducationChange }) {
-  const handleChange = (e, id) => {
-    const [name] = e.target.name.split("-");
-    const value = e.target.value;
+  const handleChange = (id, name, value) => {
     const newEducation = education.map((edu) =>
       edu.id === id
         ? {
@@ -24,6 +22,11 @@ export default function EducationFormSection({ education, onEducationChange }) {
     onEducationChange(newEducation);
   };
 
+  const handleDelete = (id) => {
+    const newEducation = education.filter((edu) => edu.id !== id);
+    onEducationChange(newEducation);
+  };
+
   return (
     <div>
       <h2 className="form-heading">Education</h2>
@@ -33,6 +36,7 @@ export default function EducationFormSection({ education, onEducationChange }) {
             key={edu.id}
             education={edu}
             onChange={handleChange}
+            onDelete={handleDelete}
           />
         ))}
       </div>

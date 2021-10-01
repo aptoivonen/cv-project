@@ -1,6 +1,16 @@
-export default function EducationFormPartial({ education, onChange }) {
+export default function EducationFormPartial({
+  education,
+  onChange,
+  onDelete,
+}) {
+  const handleChange = (e, id) => {
+    const [name] = e.target.name.split("-");
+    const value = e.target.value;
+    onChange(id, name, value);
+  };
   return (
     <div>
+      <button onClick={() => onDelete(education.id)}>Delete</button>
       <div className="form-control">
         <label className="form-label" htmlFor={`schoolName-${education.id}`}>
           School Name:
@@ -11,7 +21,7 @@ export default function EducationFormPartial({ education, onChange }) {
           name={`schoolName-${education.id}`}
           id={`schoolName-${education.id}`}
           value={education.schoolName}
-          onChange={(e) => onChange(e, education.id)}
+          onChange={(e) => handleChange(e, education.id)}
         />
       </div>
       <div className="form-control">
@@ -24,7 +34,7 @@ export default function EducationFormPartial({ education, onChange }) {
           name={`titleOfStudy-${education.id}`}
           id={`titleOfStudy-${education.id}`}
           value={education.titleOfStudy}
-          onChange={(e) => onChange(e, education.id)}
+          onChange={(e) => handleChange(e, education.id)}
         />
       </div>
       <div className="form-control">
@@ -37,7 +47,7 @@ export default function EducationFormPartial({ education, onChange }) {
           name={`dateOfStudy-${education.id}`}
           id={`dateOfStudy-${education.id}`}
           value={education.dateOfStudy}
-          onChange={(e) => onChange(e, education.id)}
+          onChange={(e) => handleChange(e, education.id)}
         />
       </div>
     </div>
