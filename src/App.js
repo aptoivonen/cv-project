@@ -1,4 +1,5 @@
 import { useState } from "react";
+import uniqid from "uniqid";
 
 import "./App.css";
 import Header from "./components/Header";
@@ -23,6 +24,14 @@ function App() {
     setEducation(data);
   };
 
+  const handleEducationAdd = () => {
+    const newEducation = [
+      ...education,
+      { id: uniqid(), schoolName: "", titleOfStudy: "", dateOfStudy: "" },
+    ];
+    setEducation(newEducation);
+  };
+
   const handleSubmit = () => {
     setSubmitted(true);
   };
@@ -35,6 +44,7 @@ function App() {
         onPersonalInfoChange={handlePersonalInfoChange}
         education={education}
         onEducationChange={handleEducationChange}
+        onEducationAdd={handleEducationAdd}
         isSubmitted={isSubmitted}
         onSubmit={handleSubmit}
       />

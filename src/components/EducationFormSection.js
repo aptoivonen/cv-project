@@ -1,7 +1,10 @@
-import uniqid from "uniqid";
 import EducationFormPartial from "./EducationFormPartial";
 
-export default function EducationFormSection({ education, onEducationChange }) {
+export default function EducationFormSection({
+  education,
+  onEducationChange,
+  onEducationAdd,
+}) {
   const handleChange = (id, name, value) => {
     const newEducation = education.map((edu) =>
       edu.id === id
@@ -11,14 +14,6 @@ export default function EducationFormSection({ education, onEducationChange }) {
           }
         : edu
     );
-    onEducationChange(newEducation);
-  };
-
-  const handleAdd = () => {
-    const newEducation = [
-      ...education,
-      { id: uniqid(), schoolName: "", titleOfStudy: "", dateOfStudy: "" },
-    ];
     onEducationChange(newEducation);
   };
 
@@ -40,7 +35,7 @@ export default function EducationFormSection({ education, onEducationChange }) {
           />
         ))}
       </div>
-      <button type="button" onClick={handleAdd}>
+      <button type="button" onClick={onEducationAdd}>
         Add Education
       </button>
     </div>

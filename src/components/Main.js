@@ -7,6 +7,7 @@ export default function Main({
   onPersonalInfoChange,
   education,
   onEducationChange,
+  onEducationAdd,
   isSubmitted,
   onSubmit,
 }) {
@@ -21,6 +22,7 @@ export default function Main({
             onPersonalInfoChange={onPersonalInfoChange}
             education={education}
             onEducationChange={onEducationChange}
+            onEducationAdd={onEducationAdd}
             onSubmit={onSubmit}
           />
         )}
