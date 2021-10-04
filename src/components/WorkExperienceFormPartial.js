@@ -12,12 +12,6 @@ export default function WorkExperienceFormPartial({
   };
   return (
     <div>
-      <Button
-        className="btn-delete"
-        onClick={() => onExperienceDelete(experience.id)}
-      >
-        Delete
-      </Button>
       <div className="form-control">
         <label className="form-label" htmlFor={`companyName-${experience.id}`}>
           Company Name:
@@ -86,6 +80,12 @@ export default function WorkExperienceFormPartial({
           onChange={(e) => handleChange(e, experience.id)}
         />
       </div>
+      <Button
+        className="btn-delete"
+        onClick={() => onExperienceDelete(experience.id)}
+      >
+        Delete
+      </Button>
     </div>
   );
 }
