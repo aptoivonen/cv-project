@@ -20,10 +20,6 @@ function App() {
     setPersonalInfo(data);
   };
 
-  // const handleEducationChange = (data) => {
-  //   setEducation(data);
-  // };
-
   const handleEducationChange = (id, name, value) => {
     const newEducation = education.map((edu) =>
       edu.id === id
