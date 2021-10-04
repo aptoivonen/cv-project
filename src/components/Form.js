@@ -10,6 +10,10 @@ export default function Form({
   onEducationChange,
   onEducationAdd,
   onEducationDelete,
+  experience,
+  onExperienceChange,
+  onExperienceAdd,
+  onExperienceDelete,
   onSubmit,
 }) {
   const handleSubmit = (e) => {
@@ -29,7 +33,12 @@ export default function Form({
         onEducationAdd={onEducationAdd}
         onEducationDelete={onEducationDelete}
       />
-      <WorkExperienceFormSection />
+      <WorkExperienceFormSection
+        experience={experience}
+        onExperienceChange={onExperienceChange}
+        onExperienceAdd={onExperienceAdd}
+        onExperienceDelete={onExperienceDelete}
+      />
       <button type="submit">Done</button>
     </form>
   );

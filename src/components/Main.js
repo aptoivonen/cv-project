@@ -97,6 +97,7 @@ export default function Main() {
             onEducationChange={handleEducationChange}
             onEducationAdd={handleEducationAdd}
             onEducationDelete={handleEducationDelete}
+            experience={experience}
             onExperienceChange={handleExperienceChange}
             onExperienceAdd={handleExperienceAdd}
             onExperienceDelete={handleExperienceDelete}
