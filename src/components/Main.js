@@ -80,6 +80,10 @@ export default function Main() {
     setSubmitted(true);
   };
 
+  const handleEdit = () => {
+    setSubmitted(false);
+  };
+
   return (
     <main className="main">
       <div className="container">
@@ -88,6 +92,7 @@ export default function Main() {
             personalInfo={personalInfo}
             education={education}
             experience={experience}
+            onEdit={handleEdit}
           />
         ) : (
           <Form

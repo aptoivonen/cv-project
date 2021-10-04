@@ -25,3 +25,8 @@
   --background-color: #febbb0;
   --hover-background-color: #fd9782;
 }
+
+.btn-edit {
+  --background-color: #a5d0f4;
+  --hover-background-color: #6cbaef;
+}

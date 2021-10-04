@@ -1,6 +1,12 @@
+import Button from "./Button";
 import "./Result.css";
 
-export default function Result({ personalInfo, education, experience }) {
+export default function Result({
+  personalInfo,
+  education,
+  experience,
+  onEdit,
+}) {
   return (
     <div className="form">
       <h2>CV</h2>
@@ -40,6 +46,11 @@ export default function Result({ personalInfo, education, experience }) {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="button-group">
+        <Button className="btn-edit" type="button" onClick={onEdit}>
+          Edit
+        </Button>
       </div>
     </div>
   );
