@@ -6,18 +6,6 @@ export default function EducationFormSection({
   onEducationAdd,
   onEducationDelete,
 }) {
-  const handleChange = (id, name, value) => {
-    const newEducation = education.map((edu) =>
-      edu.id === id
-        ? {
-            ...edu,
-            [name]: value,
-          }
-        : edu
-    );
-    onEducationChange(newEducation);
-  };
-
   return (
     <div>
       <h2 className="form-heading">Education</h2>
@@ -26,7 +14,7 @@ export default function EducationFormSection({
           <EducationFormPartial
             key={edu.id}
             education={edu}
-            onChange={handleChange}
+            onEducationChange={onEducationChange}
             onEducationDelete={onEducationDelete}
           />
         ))}

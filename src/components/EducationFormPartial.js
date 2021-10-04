@@ -1,12 +1,12 @@
 export default function EducationFormPartial({
   education,
-  onChange,
+  onEducationChange,
   onEducationDelete,
 }) {
   const handleChange = (e, id) => {
     const [name] = e.target.name.split("-");
     const value = e.target.value;
-    onChange(id, name, value);
+    onEducationChange(id, name, value);
   };
   return (
     <div>
