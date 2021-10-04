@@ -40,9 +40,11 @@ export default function Form({
         onExperienceAdd={onExperienceAdd}
         onExperienceDelete={onExperienceDelete}
       />
-      <Button className="btn-done" type="submit">
-        Done
-      </Button>
+      <div className="button-group">
+        <Button className="btn-done" type="submit">
+          Done
+        </Button>
+      </div>
     </form>
   );
 }

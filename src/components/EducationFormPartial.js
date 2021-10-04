@@ -51,12 +51,15 @@ export default function EducationFormPartial({
           onChange={(e) => handleChange(e, education.id)}
         />
       </div>
-      <Button
-        className="btn-delete"
-        onClick={() => onEducationDelete(education.id)}
-      >
-        Delete
-      </Button>
+
+      <div className="button-group">
+        <Button
+          className="btn-delete"
+          onClick={() => onEducationDelete(education.id)}
+        >
+          Delete
+        </Button>
+      </div>
     </div>
   );
 }

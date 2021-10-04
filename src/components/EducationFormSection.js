@@ -20,9 +20,11 @@ export default function EducationFormSection({
           />
         ))}
       </div>
-      <Button className="btn-add" type="button" onClick={onEducationAdd}>
-        Add Education
-      </Button>
+      <div className="button-group">
+        <Button className="btn-add" type="button" onClick={onEducationAdd}>
+          Add Education
+        </Button>
+      </div>
     </FormSection>
   );
 }

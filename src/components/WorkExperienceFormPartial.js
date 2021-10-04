@@ -80,12 +80,15 @@ export default function WorkExperienceFormPartial({
           onChange={(e) => handleChange(e, experience.id)}
         />
       </div>
-      <Button
-        className="btn-delete"
-        onClick={() => onExperienceDelete(experience.id)}
-      >
-        Delete
-      </Button>
+
+      <div className="button-group">
+        <Button
+          className="btn-delete"
+          onClick={() => onExperienceDelete(experience.id)}
+        >
+          Delete
+        </Button>
+      </div>
     </div>
   );
 }

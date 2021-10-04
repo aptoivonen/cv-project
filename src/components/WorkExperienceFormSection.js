@@ -20,9 +20,11 @@ export default function WorkExperienceFormSection({
           />
         ))}
       </div>
-      <Button className="btn-add" type="button" onClick={onExperienceAdd}>
-        Add Experience
-      </Button>
+      <div className="button-group">
+        <Button className="btn-add" type="button" onClick={onExperienceAdd}>
+          Add Experience
+        </Button>
+      </div>
     </FormSection>
   );
 }
