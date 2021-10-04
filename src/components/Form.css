@@ -21,5 +21,6 @@
   width: 100%;
   padding: 0.3rem;
   font-size: 1rem;
+  resize: none;
   border-radius: 0.2rem;
 }

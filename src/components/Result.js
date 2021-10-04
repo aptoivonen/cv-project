@@ -1,4 +1,4 @@
-export default function Result({ personalInfo, education }) {
+export default function Result({ personalInfo, education, experience }) {
   return (
     <div>
       <h2>Submitted</h2>
@@ -15,6 +15,18 @@ export default function Result({ personalInfo, education }) {
             <p>{edu.schoolName}</p>
             <p>{edu.titleOfStudy}</p>
             <p>{edu.dateOfStudy}</p>
+          </li>
+        ))}
+      </ul>
+      <h3>Work Experience:</h3>
+      <ul>
+        {experience.map((exp) => (
+          <li key={exp.id}>
+            <p>{exp.companyName}</p>
+            <p>{exp.positionTitle}</p>
+            <p>{exp.mainTasks}</p>
+            <p>{exp.dateFrom}</p>
+            <p>{exp.dateUntil}</p>
           </li>
         ))}
       </ul>
