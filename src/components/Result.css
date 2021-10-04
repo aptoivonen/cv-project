@@ -1,0 +1,22 @@
+.result-section + .result-section {
+  margin-top: 1rem;
+}
+
+.result-subheading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.result-label {
+  margin: 1rem 0 0 0;
+  font-weight: bold;
+}
+
+.result-text {
+  margin: 0.5rem 0 0 0;
+}
+
+.result-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

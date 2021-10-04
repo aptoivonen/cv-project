@@ -30,7 +30,7 @@ export default function WorkExperienceFormPartial({
           className="form-label"
           htmlFor={`positionTitle-${experience.id}`}
         >
-          Position Title:
+          Position:
         </label>
         <input
           className="form-input"

@@ -1,35 +1,46 @@
+import "./Result.css";
+
 export default function Result({ personalInfo, education, experience }) {
   return (
-    <div>
-      <h2>Submitted</h2>
-      <h3>Personal Info:</h3>
-      <p>
-        {personalInfo.firstName} {personalInfo.lastName}
-      </p>
-      <p>{personalInfo.email}</p>
-      <p>{personalInfo.phoneNumber}</p>
-      <h3>Education:</h3>
-      <ul>
-        {education.map((edu) => (
-          <li key={edu.id}>
-            <p>{edu.schoolName}</p>
-            <p>{edu.titleOfStudy}</p>
-            <p>{edu.dateOfStudy}</p>
-          </li>
-        ))}
-      </ul>
-      <h3>Work Experience:</h3>
-      <ul>
-        {experience.map((exp) => (
-          <li key={exp.id}>
-            <p>{exp.companyName}</p>
-            <p>{exp.positionTitle}</p>
-            <p>{exp.mainTasks}</p>
-            <p>{exp.dateFrom}</p>
-            <p>{exp.dateUntil}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="form">
+      <h2>CV</h2>
+      <div className="result-section">
+        <h3 className="result-subheading">Personal Info</h3>
+        <p className="result-label">Name</p>
+        <p className="result-text">
+          {personalInfo.firstName} {personalInfo.lastName}
+        </p>
+        <p className="result-label">Email</p>
+        <p className="result-text">{personalInfo.email}</p>
+        <p className="result-label">Phone</p>
+        <p className="result-text">{personalInfo.phoneNumber}</p>
+      </div>
+      <div className="result-section">
+        <h3 className="result-subheading">Education</h3>
+        <ul className="result-list">
+          {education.map((edu) => (
+            <li key={edu.id}>
+              <p className="result-label">{edu.schoolName}</p>
+              <p className="result-text">Title of Study: {edu.titleOfStudy}</p>
+              <p className="result-text">Date: {edu.dateOfStudy}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="result-section">
+        <h3 className="result-subheading">Work Experience</h3>
+        <ul className="result-list">
+          {experience.map((exp) => (
+            <li key={exp.id}>
+              <p className="result-label">{exp.companyName}</p>
+              <p className="result-text">Position: {exp.positionTitle}</p>
+              <p className="result-text">Main Tasks: {exp.mainTasks}</p>
+              <p className="result-text">Date From: {exp.dateFrom}</p>
+              <p className="result-text">Date Until: {exp.dateUntil}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
