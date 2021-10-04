@@ -1,3 +1,4 @@
+import Button from "./Button";
 import EducationFormPartial from "./EducationFormPartial";
 import FormSection from "./FormSection";
 
@@ -19,9 +20,9 @@ export default function EducationFormSection({
           />
         ))}
       </div>
-      <button type="button" onClick={onEducationAdd}>
+      <Button className="btn-add" type="button" onClick={onEducationAdd}>
         Add Education
-      </button>
+      </Button>
     </FormSection>
   );
 }

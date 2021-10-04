@@ -2,6 +2,7 @@ import "./Form.css";
 import PersonalInfoFormSection from "./PersonalInfoFormSection";
 import EducationFormSection from "./EducationFormSection";
 import WorkExperienceFormSection from "./WorkExperienceFormSection";
+import Button from "./Button";
 
 export default function Form({
   personalInfo,
@@ -39,7 +40,9 @@ export default function Form({
         onExperienceAdd={onExperienceAdd}
         onExperienceDelete={onExperienceDelete}
       />
-      <button type="submit">Done</button>
+      <Button className="btn-done" type="submit">
+        Done
+      </Button>
     </form>
   );
 }

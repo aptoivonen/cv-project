@@ -1,3 +1,4 @@
+import Button from "./Button";
 import FormSection from "./FormSection";
 import WorkExperienceFormPartial from "./WorkExperienceFormPartial";
 
@@ -19,9 +20,9 @@ export default function WorkExperienceFormSection({
           />
         ))}
       </div>
-      <button type="button" onClick={onExperienceAdd}>
+      <Button className="btn-add" type="button" onClick={onExperienceAdd}>
         Add Experience
-      </button>
+      </Button>
     </FormSection>
   );
 }

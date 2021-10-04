@@ -1,0 +1,27 @@
+.btn {
+  --background-color: #ccc;
+  --hover-background-color: #aaa;
+  padding: 0.5rem;
+  background: var(--background-color);
+  font: inherit;
+}
+
+.btn:hover,
+.btn:active {
+  background: var(--hover-background-color);
+}
+
+.btn-done {
+  --background-color: #92fd79;
+  --hover-background-color: #60e831;
+}
+
+.btn-add {
+  --background-color: #c6c6fe;
+  --hover-background-color: #aaaafe;
+}
+
+.btn-delete {
+  --background-color: #febbb0;
+  --hover-background-color: #fd9782;
+}

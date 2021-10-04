@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export default function EducationFormPartial({
   education,
   onEducationChange,
@@ -10,7 +12,12 @@ export default function EducationFormPartial({
   };
   return (
     <div>
-      <button onClick={() => onEducationDelete(education.id)}>Delete</button>
+      <Button
+        className="btn-delete"
+        onClick={() => onEducationDelete(education.id)}
+      >
+        Delete
+      </Button>
       <div className="form-control">
         <label className="form-label" htmlFor={`schoolName-${education.id}`}>
           School Name:
