@@ -11,7 +11,7 @@ export default function WorkExperienceFormPartial({
     onExperienceChange(id, name, value);
   };
   return (
-    <div>
+    <div className="form-partial">
       <div className="form-control">
         <label className="form-label" htmlFor={`companyName-${experience.id}`}>
           Company Name:
