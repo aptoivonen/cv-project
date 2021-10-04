@@ -1,4 +1,5 @@
 import EducationFormPartial from "./EducationFormPartial";
+import FormSection from "./FormSection";
 
 export default function EducationFormSection({
   education,
@@ -7,8 +8,7 @@ export default function EducationFormSection({
   onEducationDelete,
 }) {
   return (
-    <div>
-      <h2 className="form-heading">Education</h2>
+    <FormSection title="Education">
       <div className="form-group">
         {education.map((edu) => (
           <EducationFormPartial
@@ -22,6 +22,6 @@ export default function EducationFormSection({
       <button type="button" onClick={onEducationAdd}>
         Add Education
       </button>
-    </div>
+    </FormSection>
   );
 }

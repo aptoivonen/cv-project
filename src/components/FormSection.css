@@ -1,0 +1,7 @@
+.form-section + .form-section {
+  margin-top: 1rem;
+}
+
+.form-heading {
+  margin: 0;
+}

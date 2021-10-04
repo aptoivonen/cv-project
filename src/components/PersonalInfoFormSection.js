@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import FormSection from "./FormSection";
 
 export default function PersonalInfoFormSection({
   personalInfo,
@@ -13,8 +14,7 @@ export default function PersonalInfoFormSection({
   };
 
   return (
-    <div>
-      <h2 className="form-heading">Personal Info</h2>
+    <FormSection title="Personal Info">
       <div className="form-control">
         <label className="form-label" htmlFor="firstName">
           First Name:
@@ -67,7 +67,7 @@ export default function PersonalInfoFormSection({
           onChange={handleChange}
         />
       </div>
-    </div>
+    </FormSection>
   );
 }
 

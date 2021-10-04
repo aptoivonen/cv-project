@@ -1,3 +1,4 @@
+import FormSection from "./FormSection";
 import WorkExperienceFormPartial from "./WorkExperienceFormPartial";
 
 export default function WorkExperienceFormSection({
@@ -7,8 +8,7 @@ export default function WorkExperienceFormSection({
   onExperienceDelete,
 }) {
   return (
-    <div>
-      <h2 className="form-heading">Work Experience</h2>
+    <FormSection title="Work Experience">
       <div className="form-group">
         {experience.map((edu) => (
           <WorkExperienceFormPartial
@@ -22,6 +22,6 @@ export default function WorkExperienceFormSection({
       <button type="button" onClick={onExperienceAdd}>
         Add Experience
       </button>
-    </div>
+    </FormSection>
   );
 }
