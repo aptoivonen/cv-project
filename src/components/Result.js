@@ -9,9 +9,7 @@ export default function Result({
 }) {
   return (
     <div className="form">
-      <h2>CV</h2>
       <div className="result-section">
-        <h3 className="result-subheading">Personal Info</h3>
         <p className="result-label">Name</p>
         <p className="result-text">
           {personalInfo.firstName} {personalInfo.lastName}
