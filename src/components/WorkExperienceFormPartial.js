@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import ButtonGroup from "./ButtonGroup";
 import DeleteButton from "./DeleteButton";
 import Input from "./Input";
+import Label from "./Label";
 
 export default function WorkExperienceFormPartial({
   experience,
@@ -16,9 +17,7 @@ export default function WorkExperienceFormPartial({
   return (
     <div className="form-partial">
       <div className="form-control">
-        <label className="form-label" htmlFor={`companyName-${experience.id}`}>
-          Company Name:
-        </label>
+        <Label htmlFor={`companyName-${experience.id}`}>Company Name:</Label>
         <Input
           type="text"
           name={`companyName-${experience.id}`}
@@ -28,12 +27,7 @@ export default function WorkExperienceFormPartial({
         />
       </div>
       <div className="form-control">
-        <label
-          className="form-label"
-          htmlFor={`positionTitle-${experience.id}`}
-        >
-          Position:
-        </label>
+        <Label htmlFor={`positionTitle-${experience.id}`}>Position:</Label>
         <Input
           type="text"
           name={`positionTitle-${experience.id}`}
@@ -43,9 +37,7 @@ export default function WorkExperienceFormPartial({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor={`mainTasks-${experience.id}`}>
-          Main Tasks:
-        </label>
+        <Label htmlFor={`mainTasks-${experience.id}`}>Main Tasks:</Label>
         <Input
           type="textarea"
           name={`mainTasks-${experience.id}`}
@@ -55,9 +47,7 @@ export default function WorkExperienceFormPartial({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor={`dateFrom-${experience.id}`}>
-          Date From:
-        </label>
+        <Label htmlFor={`dateFrom-${experience.id}`}>Date From:</Label>
         <Input
           type="text"
           name={`dateFrom-${experience.id}`}
@@ -67,9 +57,7 @@ export default function WorkExperienceFormPartial({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor={`dateUntil-${experience.id}`}>
-          Date Until:
-        </label>
+        <Label htmlFor={`dateUntil-${experience.id}`}>Date Until:</Label>
         <Input
           type="text"
           name={`dateUntil-${experience.id}`}

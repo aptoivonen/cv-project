@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import FormSection from "./FormSection";
 import Input from "./Input";
+import Label from "./Label";
 
 export default function PersonalInfoFormSection({
   personalInfo,
@@ -17,9 +18,7 @@ export default function PersonalInfoFormSection({
   return (
     <FormSection title="Personal Info">
       <div className="form-control">
-        <label className="form-label" htmlFor="firstName">
-          First Name:
-        </label>
+        <Label htmlFor="firstName">First Name:</Label>
         <Input
           type="text"
           name="firstName"
@@ -29,9 +28,7 @@ export default function PersonalInfoFormSection({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor="lastName">
-          Last Name:
-        </label>
+        <Label htmlFor="lastName">Last Name:</Label>
         <Input
           type="text"
           name="lastName"
@@ -41,9 +38,7 @@ export default function PersonalInfoFormSection({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor="email">
-          Email:
-        </label>
+        <Label htmlFor="email">Email:</Label>
         <Input
           type="text"
           name="email"
@@ -53,9 +48,7 @@ export default function PersonalInfoFormSection({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor="phoneNumber">
-          Phone:
-        </label>
+        <Label htmlFor="phoneNumber">Phone:</Label>
         <Input
           type="text"
           name="phoneNumber"

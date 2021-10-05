@@ -18,7 +18,3 @@
 .form-partial + .form-partial {
   margin-top: 1rem;
 }
-
-.form-label {
-  display: block;
-}

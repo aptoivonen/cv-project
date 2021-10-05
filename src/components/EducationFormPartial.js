@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import ButtonGroup from "./ButtonGroup";
 import DeleteButton from "./DeleteButton";
 import Input from "./Input";
+import Label from "./Label";
 
 export default function EducationFormPartial({
   education,
@@ -16,9 +17,7 @@ export default function EducationFormPartial({
   return (
     <div className="form-partial">
       <div className="form-control">
-        <label className="form-label" htmlFor={`schoolName-${education.id}`}>
-          School Name:
-        </label>
+        <Label htmlFor={`schoolName-${education.id}`}>School Name:</Label>
         <Input
           type="text"
           name={`schoolName-${education.id}`}
@@ -28,9 +27,7 @@ export default function EducationFormPartial({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor={`titleOfStudy-${education.id}`}>
-          Title of Study:
-        </label>
+        <Label htmlFor={`titleOfStudy-${education.id}`}>Title of Study:</Label>
         <Input
           type="text"
           name={`titleOfStudy-${education.id}`}
@@ -40,9 +37,7 @@ export default function EducationFormPartial({
         />
       </div>
       <div className="form-control">
-        <label className="form-label" htmlFor={`dateOfStudy-${education.id}`}>
-          Date of Study:
-        </label>
+        <Label htmlFor={`dateOfStudy-${education.id}`}>Date of Study:</Label>
         <Input
           type="text"
           name={`dateOfStudy-${education.id}`}
