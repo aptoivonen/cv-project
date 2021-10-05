@@ -1,4 +1,5 @@
 import "./FormSection.css";
+import PropTypes from "prop-types";
 
 export default function FormSection({ title, children }) {
   return (
@@ -8,3 +9,7 @@ export default function FormSection({ title, children }) {
     </div>
   );
 }
+
+FormSection.propTypes = {
+  title: PropTypes.string.isRequired,
+};

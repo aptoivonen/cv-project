@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Button from "./Button";
 
 export default function EducationFormPartial({
@@ -63,3 +64,14 @@ export default function EducationFormPartial({
     </div>
   );
 }
+
+EducationFormPartial.propTypes = {
+  education: PropTypes.shape({
+    id: PropTypes.string,
+    schoolName: PropTypes.string,
+    titleOfStudy: PropTypes.string,
+    dateOfStudy: PropTypes.string,
+  }).isRequired,
+  onEducationChange: PropTypes.func.isRequired,
+  onEducationDelete: PropTypes.func.isRequired,
+};

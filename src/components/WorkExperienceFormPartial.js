@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Button from "./Button";
 
 export default function WorkExperienceFormPartial({
@@ -92,3 +93,16 @@ export default function WorkExperienceFormPartial({
     </div>
   );
 }
+
+WorkExperienceFormPartial.propTypes = {
+  experience: PropTypes.shape({
+    id: PropTypes.string,
+    companyName: PropTypes.string,
+    positionTitle: PropTypes.string,
+    mainTasks: PropTypes.string,
+    dateFrom: PropTypes.string,
+    dateUntil: PropTypes.string,
+  }).isRequired,
+  onExperienceChange: PropTypes.func.isRequired,
+  onExperienceDelete: PropTypes.func.isRequired,
+};

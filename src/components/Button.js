@@ -1,4 +1,5 @@
 import "./Button.css";
+import PropTypes from "prop-types";
 
 export default function Button({ className = "", children, ...rest }) {
   let styles = "btn";
@@ -11,3 +12,7 @@ export default function Button({ className = "", children, ...rest }) {
     </button>
   );
 }
+
+Button.propTypes = {
+  className: PropTypes.string,
+};

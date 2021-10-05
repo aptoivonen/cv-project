@@ -78,4 +78,5 @@ PersonalInfoFormSection.propTypes = {
     email: PropTypes.string,
     phoneNumber: PropTypes.string,
   }).isRequired,
+  onPersonalInfoChange: PropTypes.func.isRequired,
 };

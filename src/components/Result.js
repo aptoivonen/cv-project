@@ -1,10 +1,11 @@
+import PropTypes from "prop-types";
 import Button from "./Button";
 import "./Result.css";
 
 export default function Result({
   personalInfo,
-  education,
-  experience,
+  educationList,
+  experienceList,
   onEdit,
 }) {
   return (
@@ -24,7 +25,7 @@ export default function Result({
         <div className="result-section">
           <h3 className="result-subheading">Education</h3>
           <ul className="result-list">
-            {education.map((edu) => (
+            {educationList.map((edu) => (
               <li key={edu.id}>
                 <p className="result-label">{edu.schoolName}</p>
                 <p className="result-text">
@@ -38,7 +39,7 @@ export default function Result({
         <div className="result-section">
           <h3 className="result-subheading">Work Experience</h3>
           <ul className="result-list">
-            {experience.map((exp) => (
+            {experienceList.map((exp) => (
               <li key={exp.id}>
                 <p className="result-label">{exp.companyName}</p>
                 <p className="result-text">Position: {exp.positionTitle}</p>
@@ -58,3 +59,31 @@ export default function Result({
     </div>
   );
 }
+
+Result.propTypes = {
+  personalInfo: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    email: PropTypes.string,
+    phoneNumber: PropTypes.string,
+  }).isRequired,
+  educationList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      schoolName: PropTypes.string,
+      titleOfStudy: PropTypes.string,
+      dateOfStudy: PropTypes.string,
+    })
+  ).isRequired,
+  experienceList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      companyName: PropTypes.string,
+      positionTitle: PropTypes.string,
+      mainTasks: PropTypes.string,
+      dateFrom: PropTypes.string,
+      dateUntil: PropTypes.string,
+    })
+  ).isRequired,
+  onEdit: PropTypes.func.isRequired,
+};

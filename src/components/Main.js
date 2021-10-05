@@ -90,19 +90,19 @@ export default function Main() {
         {isSubmitted ? (
           <Result
             personalInfo={personalInfo}
-            education={education}
-            experience={experience}
+            educationList={education}
+            experienceList={experience}
             onEdit={handleEdit}
           />
         ) : (
           <Form
             personalInfo={personalInfo}
             onPersonalInfoChange={handlePersonalInfoChange}
-            education={education}
+            educationList={education}
             onEducationChange={handleEducationChange}
             onEducationAdd={handleEducationAdd}
             onEducationDelete={handleEducationDelete}
-            experience={experience}
+            experienceList={experience}
             onExperienceChange={handleExperienceChange}
             onExperienceAdd={handleExperienceAdd}
             onExperienceDelete={handleExperienceDelete}
