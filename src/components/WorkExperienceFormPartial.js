@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import DeleteButton from "./DeleteButton";
+import Input from "./Input";
 
 export default function WorkExperienceFormPartial({
   experience,
@@ -17,8 +18,7 @@ export default function WorkExperienceFormPartial({
         <label className="form-label" htmlFor={`companyName-${experience.id}`}>
           Company Name:
         </label>
-        <input
-          className="form-input"
+        <Input
           type="text"
           name={`companyName-${experience.id}`}
           id={`companyName-${experience.id}`}
@@ -33,8 +33,7 @@ export default function WorkExperienceFormPartial({
         >
           Position:
         </label>
-        <input
-          className="form-input"
+        <Input
           type="text"
           name={`positionTitle-${experience.id}`}
           id={`positionTitle-${experience.id}`}
@@ -46,8 +45,8 @@ export default function WorkExperienceFormPartial({
         <label className="form-label" htmlFor={`mainTasks-${experience.id}`}>
           Main Tasks:
         </label>
-        <textarea
-          className="form-input"
+        <Input
+          type="textarea"
           name={`mainTasks-${experience.id}`}
           id={`mainTasks-${experience.id}`}
           value={experience.mainTasks}
@@ -58,8 +57,7 @@ export default function WorkExperienceFormPartial({
         <label className="form-label" htmlFor={`dateFrom-${experience.id}`}>
           Date From:
         </label>
-        <input
-          className="form-input"
+        <Input
           type="text"
           name={`dateFrom-${experience.id}`}
           id={`dateFrom-${experience.id}`}
@@ -71,8 +69,7 @@ export default function WorkExperienceFormPartial({
         <label className="form-label" htmlFor={`dateUntil-${experience.id}`}>
           Date Until:
         </label>
-        <input
-          className="form-input"
+        <Input
           type="text"
           name={`dateUntil-${experience.id}`}
           id={`dateUntil-${experience.id}`}
