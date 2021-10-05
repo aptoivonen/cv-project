@@ -7,7 +7,7 @@ export default function Button({ className = "", children, ...rest }) {
     styles += ` ${className}`;
   }
   return (
-    <button className={styles} {...rest}>
+    <button {...rest} className={styles}>
       {children}
     </button>
   );
