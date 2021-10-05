@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: var(--main-header-height);
+  height: 100px;
   color: #fff;
   font-size: 2rem;
   background: #333333;
