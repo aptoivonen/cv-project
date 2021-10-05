@@ -48,7 +48,6 @@ export default function WorkExperienceFormPartial({
         </label>
         <textarea
           className="form-input"
-          type="text"
           name={`mainTasks-${experience.id}`}
           id={`mainTasks-${experience.id}`}
           value={experience.mainTasks}
