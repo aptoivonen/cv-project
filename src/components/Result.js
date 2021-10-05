@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Button from "./Button";
+import EditButton from "./EditButton";
 import "./Result.css";
 
 export default function Result({
@@ -52,9 +52,7 @@ export default function Result({
         </div>
       </div>
       <div className="button-group">
-        <Button className="btn-edit" type="button" onClick={onEdit}>
-          Edit
-        </Button>
+        <EditButton onClick={onEdit} />
       </div>
     </div>
   );

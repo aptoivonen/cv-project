@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Button from "./Button";
+import DeleteButton from "./DeleteButton";
 
 export default function EducationFormPartial({
   education,
@@ -54,12 +54,9 @@ export default function EducationFormPartial({
       </div>
 
       <div className="button-group">
-        <Button
-          className="btn-delete"
-          onClick={() => onEducationDelete(education.id)}
-        >
+        <DeleteButton onClick={() => onEducationDelete(education.id)}>
           Remove education
-        </Button>
+        </DeleteButton>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import PersonalInfoFormSection from "./PersonalInfoFormSection";
 import EducationFormSection from "./EducationFormSection";
 import WorkExperienceFormSection from "./WorkExperienceFormSection";
-import Button from "./Button";
+import DoneButton from "./DoneButton";
 
 export default function Form({
   personalInfo,
@@ -42,9 +42,7 @@ export default function Form({
         onExperienceDelete={onExperienceDelete}
       />
       <div className="button-group">
-        <Button className="btn-done" type="submit">
-          Done
-        </Button>
+        <DoneButton />
       </div>
     </form>
   );

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import AddButton from "./AddButton";
 import Button from "./Button";
 import FormSection from "./FormSection";
 import WorkExperienceFormPartial from "./WorkExperienceFormPartial";
@@ -22,9 +23,7 @@ export default function WorkExperienceFormSection({
         ))}
       </div>
       <div className="button-group">
-        <Button className="btn-add" type="button" onClick={onExperienceAdd}>
-          Add Experience
-        </Button>
+        <AddButton onClick={onExperienceAdd}>Add Experience</AddButton>
       </div>
     </FormSection>
   );
