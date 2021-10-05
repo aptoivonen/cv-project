@@ -3,6 +3,7 @@ import ButtonGroup from "./ButtonGroup";
 import DeleteButton from "./DeleteButton";
 import Input from "./Input";
 import Label from "./Label";
+import FormControl from "./FormControl";
 
 export default function EducationFormPartial({
   education,
@@ -16,7 +17,7 @@ export default function EducationFormPartial({
   };
   return (
     <div className="form-partial">
-      <div className="form-control">
+      <FormControl>
         <Label htmlFor={`schoolName-${education.id}`}>School Name:</Label>
         <Input
           type="text"
@@ -25,8 +26,8 @@ export default function EducationFormPartial({
           value={education.schoolName}
           onChange={(e) => handleChange(e, education.id)}
         />
-      </div>
-      <div className="form-control">
+      </FormControl>
+      <FormControl>
         <Label htmlFor={`titleOfStudy-${education.id}`}>Title of Study:</Label>
         <Input
           type="text"
@@ -35,8 +36,8 @@ export default function EducationFormPartial({
           value={education.titleOfStudy}
           onChange={(e) => handleChange(e, education.id)}
         />
-      </div>
-      <div className="form-control">
+      </FormControl>
+      <FormControl>
         <Label htmlFor={`dateOfStudy-${education.id}`}>Date of Study:</Label>
         <Input
           type="text"
@@ -45,7 +46,7 @@ export default function EducationFormPartial({
           value={education.dateOfStudy}
           onChange={(e) => handleChange(e, education.id)}
         />
-      </div>
+      </FormControl>
 
       <ButtonGroup>
         <DeleteButton onClick={() => onEducationDelete(education.id)}>

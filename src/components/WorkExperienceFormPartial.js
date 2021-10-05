@@ -3,6 +3,7 @@ import ButtonGroup from "./ButtonGroup";
 import DeleteButton from "./DeleteButton";
 import Input from "./Input";
 import Label from "./Label";
+import FormControl from "./FormControl";
 
 export default function WorkExperienceFormPartial({
   experience,
@@ -16,7 +17,7 @@ export default function WorkExperienceFormPartial({
   };
   return (
     <div className="form-partial">
-      <div className="form-control">
+      <FormControl>
         <Label htmlFor={`companyName-${experience.id}`}>Company Name:</Label>
         <Input
           type="text"
@@ -25,8 +26,8 @@ export default function WorkExperienceFormPartial({
           value={experience.companyName}
           onChange={(e) => handleChange(e, experience.id)}
         />
-      </div>
-      <div className="form-control">
+      </FormControl>
+      <FormControl>
         <Label htmlFor={`positionTitle-${experience.id}`}>Position:</Label>
         <Input
           type="text"
@@ -35,8 +36,8 @@ export default function WorkExperienceFormPartial({
           value={experience.positionTitle}
           onChange={(e) => handleChange(e, experience.id)}
         />
-      </div>
-      <div className="form-control">
+      </FormControl>
+      <FormControl>
         <Label htmlFor={`mainTasks-${experience.id}`}>Main Tasks:</Label>
         <Input
           type="textarea"
@@ -45,8 +46,8 @@ export default function WorkExperienceFormPartial({
           value={experience.mainTasks}
           onChange={(e) => handleChange(e, experience.id)}
         />
-      </div>
-      <div className="form-control">
+      </FormControl>
+      <FormControl>
         <Label htmlFor={`dateFrom-${experience.id}`}>Date From:</Label>
         <Input
           type="text"
@@ -55,8 +56,8 @@ export default function WorkExperienceFormPartial({
           value={experience.dateFrom}
           onChange={(e) => handleChange(e, experience.id)}
         />
-      </div>
-      <div className="form-control">
+      </FormControl>
+      <FormControl>
         <Label htmlFor={`dateUntil-${experience.id}`}>Date Until:</Label>
         <Input
           type="text"
@@ -65,7 +66,7 @@ export default function WorkExperienceFormPartial({
           value={experience.dateUntil}
           onChange={(e) => handleChange(e, experience.id)}
         />
-      </div>
+      </FormControl>
 
       <ButtonGroup>
         <DeleteButton onClick={() => onExperienceDelete(experience.id)}>
