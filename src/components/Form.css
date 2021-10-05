@@ -1,12 +1,15 @@
 .form {
   padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.form-bg {
   background: linear-gradient(
     to top,
     rgb(41, 128, 185),
     rgb(109, 213, 250),
     rgb(255, 255, 255)
   );
-  border-radius: 0.2rem;
 }
 
 .form-control {

@@ -1,5 +1,26 @@
+.result-bg {
+  background: linear-gradient(
+    to top,
+    rgb(127, 127, 213),
+    rgb(134, 168, 231),
+    rgb(145, 234, 228)
+  );
+}
+
 .result-section + .result-section {
   margin-top: 1rem;
+}
+
+.result-section--main {
+  display: flex;
+}
+
+.result-info {
+  margin-left: auto;
+}
+
+.result-mainheading {
+  font-size: 4rem;
 }
 
 .result-subheading {

@@ -23,7 +23,7 @@ export default function Form({
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="form form-bg" onSubmit={handleSubmit}>
       <PersonalInfoFormSection
         personalInfo={personalInfo}
         onPersonalInfoChange={onPersonalInfoChange}
