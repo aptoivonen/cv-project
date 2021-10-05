@@ -1,6 +1,4 @@
 .btn {
-  --background-color: #ccc;
-  --hover-background-color: #aaa;
   padding: 0.5rem;
   background: var(--background-color);
   font: inherit;
