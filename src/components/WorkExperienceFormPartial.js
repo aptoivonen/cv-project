@@ -86,7 +86,7 @@ export default function WorkExperienceFormPartial({
           className="btn-delete"
           onClick={() => onExperienceDelete(experience.id)}
         >
-          Delete
+          Remove Work Experience
         </Button>
       </div>
     </div>

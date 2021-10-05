@@ -57,7 +57,7 @@ export default function EducationFormPartial({
           className="btn-delete"
           onClick={() => onEducationDelete(education.id)}
         >
-          Delete
+          Remove education
         </Button>
       </div>
     </div>
