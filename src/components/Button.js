@@ -1,11 +1,8 @@
 import "./Button.css";
 import PropTypes from "prop-types";
 
-export default function Button({ className = "", children, ...rest }) {
-  let styles = "btn";
-  if (className) {
-    styles += ` ${className}`;
-  }
+export default function Button({ className, children, ...rest }) {
+  const styles = `btn ${className}`;
   return (
     <button {...rest} className={styles}>
       {children}
