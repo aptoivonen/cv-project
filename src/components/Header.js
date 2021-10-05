@@ -1,11 +1,12 @@
 import "./Header.css";
+import Container from "./Container";
 
 export default function Header() {
   return (
     <header className="main-header">
-      <div className="container">
+      <Container>
         <h1 className="main-heading">CV App</h1>
-      </div>
+      </Container>
     </header>
   );
 }

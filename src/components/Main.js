@@ -1,8 +1,9 @@
+import "./Main.css";
 import { useState } from "react";
 import uniqid from "uniqid";
 import Form from "./Form";
 import Result from "./Result";
-import "./Main.css";
+import Container from "./Container";
 
 export default function Main() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -86,7 +87,7 @@ export default function Main() {
 
   return (
     <main className="main">
-      <div className="container">
+      <Container>
         {isSubmitted ? (
           <Result
             personalInfo={personalInfo}
@@ -109,7 +110,7 @@ export default function Main() {
             onSubmit={handleSubmit}
           />
         )}
-      </div>
+      </Container>
     </main>
   );
 }
