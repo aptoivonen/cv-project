@@ -1,8 +1,9 @@
 import "./Button.css";
+import classNames from "classnames";
 import PropTypes from "prop-types";
 
-export default function Button({ className, ...props }) {
-  const styles = `btn ${className}`;
+export default function Button(props) {
+  const styles = classNames("btn", props.className);
   return (
     <button {...props} className={styles}>
       {props.children}

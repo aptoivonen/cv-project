@@ -1,7 +1,8 @@
 import "./Input.css";
+import classNames from "classnames";
 
 export default function Input(props) {
-  const styles = `form-input ${props.className}`;
+  const styles = classNames("form-input", props.className);
   let element =
     props.type === "textarea" ? (
       <textarea {...props} className={styles} />
