@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import AddButton from "./AddButton";
-import Button from "./Button";
 import FormSection from "./FormSection";
 import WorkExperienceFormPartial from "./WorkExperienceFormPartial";
 
