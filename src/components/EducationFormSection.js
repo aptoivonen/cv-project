@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import AddButton from "./AddButton";
+import ButtonGroup from "./ButtonGroup";
 import EducationFormPartial from "./EducationFormPartial";
 import FormSection from "./FormSection";
 
@@ -21,9 +22,9 @@ export default function EducationFormSection({
           />
         ))}
       </div>
-      <div className="button-group">
+      <ButtonGroup>
         <AddButton onClick={onEducationAdd}>Add Education</AddButton>
-      </div>
+      </ButtonGroup>
     </FormSection>
   );
 }

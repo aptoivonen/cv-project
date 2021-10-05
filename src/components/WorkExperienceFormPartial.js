@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import ButtonGroup from "./ButtonGroup";
 import DeleteButton from "./DeleteButton";
 import Input from "./Input";
 
@@ -78,11 +79,11 @@ export default function WorkExperienceFormPartial({
         />
       </div>
 
-      <div className="button-group">
+      <ButtonGroup>
         <DeleteButton onClick={() => onExperienceDelete(experience.id)}>
           Remove Work Experience
         </DeleteButton>
-      </div>
+      </ButtonGroup>
     </div>
   );
 }
