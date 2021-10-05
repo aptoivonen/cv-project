@@ -4,6 +4,7 @@ import PersonalInfoFormSection from "./PersonalInfoFormSection";
 import EducationFormSection from "./EducationFormSection";
 import WorkExperienceFormSection from "./WorkExperienceFormSection";
 import DoneButton from "./DoneButton";
+import Panel from "./Panel";
 
 export default function Form({
   personalInfo,
@@ -24,26 +25,28 @@ export default function Form({
   };
 
   return (
-    <form className="form form-bg" onSubmit={handleSubmit}>
-      <PersonalInfoFormSection
-        personalInfo={personalInfo}
-        onPersonalInfoChange={onPersonalInfoChange}
-      />
-      <EducationFormSection
-        educationList={educationList}
-        onEducationChange={onEducationChange}
-        onEducationAdd={onEducationAdd}
-        onEducationDelete={onEducationDelete}
-      />
-      <WorkExperienceFormSection
-        experienceList={experienceList}
-        onExperienceChange={onExperienceChange}
-        onExperienceAdd={onExperienceAdd}
-        onExperienceDelete={onExperienceDelete}
-      />
-      <div className="button-group">
-        <DoneButton />
-      </div>
+    <form className="form-bg" onSubmit={handleSubmit}>
+      <Panel>
+        <PersonalInfoFormSection
+          personalInfo={personalInfo}
+          onPersonalInfoChange={onPersonalInfoChange}
+        />
+        <EducationFormSection
+          educationList={educationList}
+          onEducationChange={onEducationChange}
+          onEducationAdd={onEducationAdd}
+          onEducationDelete={onEducationDelete}
+        />
+        <WorkExperienceFormSection
+          experienceList={experienceList}
+          onExperienceChange={onExperienceChange}
+          onExperienceAdd={onExperienceAdd}
+          onExperienceDelete={onExperienceDelete}
+        />
+        <div className="button-group">
+          <DoneButton />
+        </div>
+      </Panel>
     </form>
   );
 }
