@@ -4,6 +4,7 @@ import DeleteButton from "./DeleteButton";
 import Input from "./Input";
 import Label from "./Label";
 import FormControl from "./FormControl";
+import FormPartial from "./FormPartial";
 
 export default function WorkExperienceFormPartial({
   experience,
@@ -16,7 +17,7 @@ export default function WorkExperienceFormPartial({
     onExperienceChange(id, name, value);
   };
   return (
-    <div className="form-partial">
+    <FormPartial>
       <FormControl>
         <Label htmlFor={`companyName-${experience.id}`}>Company Name:</Label>
         <Input
@@ -73,7 +74,7 @@ export default function WorkExperienceFormPartial({
           Remove Work Experience
         </DeleteButton>
       </ButtonGroup>
-    </div>
+    </FormPartial>
   );
 }
 

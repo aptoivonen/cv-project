@@ -4,6 +4,7 @@ import DeleteButton from "./DeleteButton";
 import Input from "./Input";
 import Label from "./Label";
 import FormControl from "./FormControl";
+import FormPartial from "./FormPartial";
 
 export default function EducationFormPartial({
   education,
@@ -16,7 +17,7 @@ export default function EducationFormPartial({
     onEducationChange(id, name, value);
   };
   return (
-    <div className="form-partial">
+    <FormPartial>
       <FormControl>
         <Label htmlFor={`schoolName-${education.id}`}>School Name:</Label>
         <Input
@@ -53,7 +54,7 @@ export default function EducationFormPartial({
           Remove education
         </DeleteButton>
       </ButtonGroup>
-    </div>
+    </FormPartial>
   );
 }
 

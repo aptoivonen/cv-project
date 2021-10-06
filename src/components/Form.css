@@ -6,11 +6,3 @@
     rgb(255, 255, 255)
   );
 }
-
-.form-partial {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.form-partial + .form-partial {
-  margin-top: 1rem;
-}
